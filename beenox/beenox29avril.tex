@@ -13,6 +13,7 @@
 \usepackage{color}
 \usepackage{multirow}
 \usepackage{tabularx}
+\usepackage{listings}
 
 \onehalfspacing
 \begin{document}
@@ -72,36 +73,87 @@
 Les membres de Beenox nous ont donné quelques recommendations pour le sprint de cet été. 
 \begin{itemize}
 \item \textbf{Temps de sprint maximal: 2 ou 3 semaines}
-\item \textbf{Trouver un client et définir une date de fin précise} 
+\item \textbf{Trouver un client et définir une date de fin précise}. 
 Plut\^ot que de définir une date arbitraire, trouver un <<client>>, par exemple un professeur, `a qui l'on pourrait montrer notre progr\`es régulièrement.
 \item \textbf{Si la tâche n'est pas écrite, elle ne sera pas faite.}
-\item \textbf{Avoir à la fin de chaque sprint un <<sprint review>>.}
+\item Avoir à la fin de chaque sprint un \textbf{<<sprint review>>}.
 On peut ainsi mieux évaluer nos estiamtions de temps pour le prochain sprint.
 \end{itemize}
 Les membres de Beenox nous ont aussi proposé de mettre les tâches de notre sprint sur Slack, pour qu'ils puissent l'évaluer.
 
+\subsection*{Intégration dans la STA des outils crées pour la compétition}
+Avoir un code standardisé est important pour l'intégration propre dans la STA des outils.
+Un code non standardisé doit \^etre considéré comme un code non fonctionnel/non livrable.
+Cela sera traité avec les fork/pull request de \textit{GitHub}.
+\\
+Pour établir le standard du code, il est mieux de prendre comme base \textbf{un standard de code pré-établie} plut\^ot que d'en créer un `a partir de rien.
+
 \subsection*{Probl\`emes de performances avec l'engin de compétition}
+L'engin va avoir un temps global pour tout les systèmes. 
+On peut donc augmenter la performance en attendant un temps prédéfini avant de mettre à jour dans la <<Game Loop>> les données de chaque robot.
+
+\begin{lstlisting}[language = python]
+float time
+if time > x
+	#mettre a jour les donnees
+\end{lstlisting}
 
 \subsection*{Abstraction du niveau des startégies}
+La figure \ref{fig:gpo} représente les couches d'abstractions du \textit{Goal Oriented Programming}.
+Chaque couche communique avec celle directement en bas et celle directement en haut.
+
+\begin{figure}[htp]
+\label{fig:gpo}
+\centering
+\includegraphics[height=9cm,keepaspectratio]{gpo_couches.png}
+\caption{Couches d'abstractions du \textit{Goal Oriented Programming}}
+\end{figure}
+
+Il a aussi été recommandé de mettre l'emphase sur le développement des couches <<Tactique>> et <<Action>> de la STA.
 
 \subsection*{Intégration des nouveaux}
 Pour faciliter l'intégration des nouveaux, il faudrait avoir:
 \begin{itemize}
 \item Un wiki GitHub pour la documentation
-\item Un << How to >>
+\item Un << How to >> incluant:
 \begin{itemize}
-\item Un guide d'installation. 
-Il faut que n'importe qui puisse suivre les instructions et avoir une simulation de jeux.
-\item Identifier sur chaque guide la/les personne/s resssource/s \textbf{avec une photo}. 
+\item \textbf{Un guide d'installation}.
+Il faut que n'importe qui puisse suivre les instructions et avoir une simulation de jeux sur son ordinateur sans pépins.
+\item \textbf{La/les personne/s resssource/s avec photo} pour chaque guide rédigé.
 \end{itemize}
 \end{itemize}
 
 \subsection*{Références}
 Alexandre Bergeron nous a envoyé une liste de livres et de sites que l'équipe pourra utiliser comme référence sur l'intelligence artificielle.
 
+Il a aussi donné quelques recommendations par rapport au sujet:
+\begin{itemize}
+\item Les livres sur l'intelligence arificielle ont été rédigé avec les contraintes du jeux vidéo.
+Nous n'avons pas ce genre de contraintes et pouvons éviter certaines abstractions difficiles.
+\item Un vieux livre n'est pas nécessairement mauvais/dépassé.
+\end{itemize}
+
 \subsection*{Debug dans les jeux vidéos}
+\begin{itemize}
+\item Mettre \textbf{le plus d'information possible}.
+\item L'interface doit être \textbf{facile à utiliser}.
+\item De préférence, le débuggeur doit être \textbf{toujours allumé}.
+Un bug peut être rare et difficile à reproduire.
+\item Avoir un mode \textbf{image par image}.
+Cela peut être produit avec une prise d'image à chque intervalle de temps <<x>>.
+\item Utiliser \textbf{plein de log}.
+De préférence, chaque robot a son log.
+Dans ceux-ci, il faudrait au minimum:
+\begin{itemize}
+\item La \textbf{tactique} que le joueur éxécute en ce moment.
+\item L'\textbf{Action} que le joeur éxécute en ce moment.
+\end{itemize}
+
+\end{itemize}
 
 \subsection*{Autres conseils}
+Notre système d'exploitation \textbf{n'est pas à temps réel}.
+Il faut le considérer lors de l'écriture de code sensible au temps.
 
 \subsection*{Membres présents}
 \begin{itemize}
