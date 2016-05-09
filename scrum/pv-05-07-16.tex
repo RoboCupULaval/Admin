@@ -1,0 +1,128 @@
+\documentclass[12pt,letterpaper,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pdfpages}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{tabularx}
+
+\onehalfspacing
+\begin{document}
+
+\setcounter{secnumdepth}{0}
+\begin{titlepage}
+
+        \vspace*{1cm}
+        \begin{small}
+        \begin{tabularx}{\textwidth}{ l X r }
+        \multirow{3}{*}{\includegraphics[height=1.5cm,keepaspectratio]{ul_logo.pdf}}
+        && \'Equipe IA\\
+        && Projet Robocup\\
+        && Été 2016\\
+
+        \scriptsize{\textbf{FACULTÉ DES SCIENCES ET GÉNIE}} && Robocup
+        \end{tabularx}
+        \end{small}
+
+        \vfill
+
+        \begin{center}
+
+        Gestion de projet Robocup
+
+        \vspace{0.5cm}
+
+        Rencontre d'\'equipe
+
+        \vspace{2cm}
+
+        \end{center}
+
+        \vfill
+
+        Date: 07 mai 2016
+
+        \vspace{0.4cm}
+
+        \rule{\textwidth}{2pt}
+
+        \vspace{0.3cm}
+
+        \begin{tabularx}{\textwidth}{ l X r }
+
+        \textbf{Robocup} && \textbf{\'Equipe IA} \\
+
+        \end{tabularx}
+
+
+\end{titlepage}
+
+
+\section*{Proc\`es-verbal de la réunion du 07 mai 2016}
+
+
+\subsection{Division des tâches et assignation}
+\begin{itemize}
+	\item Compilation windows : Alexandre G.
+	\item Documentation wiki : David C, Félix P, Alexandra M, Alexandre G, Maxime M.
+	\item Clean-up du code : Félix P, Alexandre G, Maxime M.
+	\item Créer un how-to pour une stratégie de base : ???
+\end{itemize}
+Tâches pour tous : Lire le papier sur STA (STP), faire des unit tests sur son code, utiliser le standard PEP-8.
+
+\subsection*{Retour avancement}
+\begin{itemize}
+	\item Le plan initial de synchronisation de temps avec l'engin physique en utilisant les timestamp de GrSim n'a pas pu être implémenté pour des raisons techniques. Félix a résolu le problème de façon temporaire en modifiant le code source de GrSim.
+	\item Du côté de la consommation de CPU de GrSim, Félix a proposé d'ajouter une option permettant de diminuer la consommation en cas de besoin. Il se chargera de l'implémenter.
+	\item La documentation à été commencée par Alexandre G, plusieurs membres de l'équipe se chargeront de l'améliorer.
+	\item Les dépôts GitHub ont été restructuré dans une organisation (RobocupULavalHautNiveau). 
+\end{itemize}
+
+\subsection*{Utilisation de git pour versionner le code source}
+La documentation du projet sera maintenant disponible sur le dépôt "Admin".
+Avant d'être intégré à la branche dev, le code devra être révisé par Alexandre G, Félix P ou Maxime M.
+Tout bug ou travail devra faire l'objet d'une issue.
+
+\subsection*{Rappel slack pour les communications}
+Alexandre G. a rappelé à l'équipe que les communications se feront par Slack, autant pour les informations concernant les réunions que pour les questionnements plus techniques.
+De plus, il serait apprécié que les membres de l'équipe réagissent de temps à autre aux discussions.
+
+\subsection{Unit test -- int\'egration continue}
+L'objectif de base est que, pour tout nouveau code, des tests unitaires soient développés simultanément.
+Ajouter des tests pour le code actuel est une des tâches majeures du milestone 1.
+La couverture souhaitée est de 90\%.
+Suite à l'implémentation des tests, un système d'intégration continue avec nightly build sera mis en place.
+
+\subsection{Affichage debug}
+Un affichage de debug sera réalisé par Julien B. 
+L'affichage devra être utilisable par l'équipe ia et par les équipes bas-niveau/électrique.
+
+\subsection{team-intégration}
+Suite à la proposition de Philippe Turgeon, une équipe d'intégration sera mise en place pour travailler directement sur le robot. 
+Les rencontres de cette équipe seront, en général, le mercredi, et la présence de quelques membres de la team ia est requise.
+Le but est d'encourager le travail multi-disciplinaire.
+
+
+\subsection*{Membres présents}
+\begin{itemize}
+\item Julien B.
+\item Ryma H.
+\item David C.
+\item Alexandre G.
+\item Félix P.
+\item Étienne B.
+\item Alexandra M.
+\item Maxime G.
+\item Yassine Z.
+\item Maxime M.
+\end{itemize}
+
+\end{document}
