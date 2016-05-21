@@ -17,4 +17,4 @@ Les dossiers « beenox » et « rencontres » on des fichiers canevas.tex avec l
 Les fichiers ont comme titres la date de la réunion avec un préfixe définissant son contenu.
 Les pocès verbaux ont comme préfixe « pv ».
 Les ordres du jour ont comme préfixe « oj ».
-Les renontre beenox n'ont pas de préfixes.
+Les rencontres  avec Beenox n'ont pas de préfixes.
