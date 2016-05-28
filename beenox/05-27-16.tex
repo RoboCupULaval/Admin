@@ -1,0 +1,126 @@
+\documentclass[12pt,letterpaper,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pdfpages}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{listings}
+
+\onehalfspacing
+\begin{document}
+
+\setcounter{secnumdepth}{0}
+\begin{titlepage}
+
+        \vspace*{1cm}
+        \begin{small}
+        \begin{tabularx}{\textwidth}{ l X r }
+        \multirow{3}{*}{\includegraphics[height=1.5cm,keepaspectratio]{ul_logo.pdf}}
+        && \'Equipe IA\\
+        && Projet Robocup\\
+        && Été 2016\\
+
+        \scriptsize{\textbf{FACULTÉ DES SCIENCES ET GÉNIE}} && Robocup
+        \end{tabularx}
+        \end{small}
+
+        \vfill
+
+        \begin{center}
+
+        Gestion de projet Robocup
+
+        \vspace{0.5cm}
+
+        Rencontre d'\'equipe
+
+        \vspace{2cm}
+
+        \end{center}
+
+        \vfill
+
+        Date: 27 mai 2016
+
+        \vspace{0.4cm}
+
+        \rule{\textwidth}{2pt}
+
+        \vspace{0.3cm}
+
+        \begin{tabularx}{\textwidth}{ l X r }
+
+        \textbf{Robocup} && \textbf{\'Equipe IA} \\
+
+        \end{tabularx}
+
+
+\end{titlepage}
+
+
+\section*{Rencontre avec Beenox, 27 mai 2016}
+
+\subsection*{Retour sur le premier sprint de l'été 2016}
+Nous avons fait un retour sur le travail effectué au cours du premier sprint de l'été.
+\begin{itemize}
+	\item Présentation du wiki du dépôt \emph{admin}, qui contient une foule d'informations utiles pour démarrer et divers \emph{HOW TO}.
+	\item Résumé du travail de nettoyage du code et des standards mis en place (PEP-8, doc strings, production de page HTML pour la documentation, unit tests, etc).	
+	\item Utilisation de \emph{waffle} pour visualiser les issues et le backlog.
+	\item Utilisation du service d'intégration continue de \emph{drone.io} pour tester le code à chaque commit.
+	\item Travail en utilisant le système de forks et de pull requests.
+	\item Mise en place d'une équipe d'intégration entre les départements et organisation de séances de travail communes. 
+\end{itemize}
+
+\subsection*{Objectifs pour le deuxième sprint de l'été 2016}
+Nous avons discuté avec les membres de Beenox de nos objectifs pour le second sprint de l'été 2016. L'objectif pour la fin de l'été étant de simuler une partie de 3 vs 3, nous avons convenu qu'une version alpha des stratégies devaient être livrée au début du mois de juillet. Cette version alpha serait une version de base, mais fonctionnelle, qu'il serait possible d'améliorer de façon itérative jusqu'à la présentation. De façon plus précise, les objectifs du mois prochain sont les suivant :
+\begin{itemize}
+	\item Une version alpha du GUI de debug générique doit être implémentée. Une des premières features à développer serait de pouvoir déplacer les robots en cliquant à un endroit du terrain.
+	\item Il faut intégrer les outils développés par les nouveaux membres au cours de la dernière session (behaviour tree, pathfinder, influence map, etc) dans le framework. Le pathfinder doit être fonctionnel au plus vite.
+	\item Maintenant que tous les outils pour développer les stratégies sont en place, on doit commencer à développer celles-ci.
+	\item Une machine à états finis doit être implémentée.
+	\item Il faudra donner des tâches précises à chaque personne, et ce, dès le début du sprint. Le temps nécessaire pour chaque tâche doit être préalablement évalué.
+	\item À la fin du sprint, il faudra faire une révision du code produit et, au besoin, effectuer un clean up ainsi que mettre à jour la documentation.
+\end{itemize}
+Les membres de Beenox nous ont aussi proposé de mettre les tâches de notre sprint sur Slack, pour qu'ils puissent l'évaluer.
+
+\subsection*{Maintenir la propreté du code}
+Maintenant que le code a été nettoyé et documenté, il sera primordiale de le garder propre. Il sera donc important de conserver de bonnes habitudes et de maintenir les standards mis en place. Pour ce faire, il faudra mettre l'accent sur le code review. À la fin de chaque sprint, au moment de faire un retour sur le travail effectué, nous pourrons nettoyer le code et mettre à jour la documentation si c'est nécessaire.
+
+\subsection*{Établir une convention pour les noms}
+Le standard de code PEP-8 ne donne pas d'indication sur la façon de nommer les variables, les paramètres, les classes, etc. Il serait utile d'établir une convention afin d'uniformiser le code. Plusieurs conventions existent déjà et nous pourrions nous en inspirer.
+
+\subsection*{Considérations pour la FSM}
+Dans le livre "Programming Game AI by Example" suggéré par les membres de Beenox, un bon modèle de machine à états est décrit. Il serait pertinent de s'en inspirer. Entre autre, cet ouvrage présente deux façons de passer d'un état à l'autre, soit le \emph{setState} et le \emph{setNextState}. La première consiste à changer immédiatement l'état d'un acteur, mais si cette fonction est appelée plusieurs fois au cours d'un même frame, cela peut mener à de l'hystérie. La seconde méthode, qui est la plus utilisée, consiste à indiquer le prochain état des acteurs durant le frame et attendre à la fin de celui-ci pour faire le changement. Il est d'ailleurs possible de choisir le bon état si plusieurs appels différents ont été fait dans la section logique d'un même frame.
+
+Finalement, contrairement à ce qui a été fait pour la compétition, le programmeur devra avoir plein contrôle du changement d'état de la FSM.
+
+\subsection*{Partage des connaissances}
+Il serait important de mesurer l'impact qu'aurait sur l'organisation le départ de chacun de ses membres afin de cerner les \emph{boss factors}, puis s'assurer que les connaissances soient réparties dans tout le groupe.  Idéalement, chaque membre aurait une bonne connaissance de l'ensemble de ce qui se fait dans le département d'IA. Pour ce faire, un système de partage de connaissances pourrait compléter les wikis et la documentation. De temps en temps, après un scrum, un membre de l'équipe pourrait présenter aux autres ce sur quoi il travail. Cela aiderait à ce que tout le monde comprenne chaque section du code.
+
+\subsection*{Autres conseils}
+\begin{itemize}
+	\item Trouver une façon de hiérarchiser les issues ou donner de la priorité à certains.
+	\item Mettre le distributable compilé de grSim sur Github avec une historique des versions.
+	\item Lors de la rencontre avec le client, il serait bon de présenter des solutions envisagées pour les problèmes de la version du produit, afin de montrer vers où nous nous dirigeons.
+	\item Il serait très utile de mesurer le temps requis pour chaque étape de la boucle principale, principalement la logique, l'envoi des instructions et la réaction des robots.
+\end{itemize}
+
+\subsection*{Membres présents}
+\begin{itemize}
+\item Philippe Lebel
+\item Alexandre G.
+\item Yassine Z.
+\item Maxime G.
+\item Maxime M.
+\end{itemize}
+
+\end{document}
