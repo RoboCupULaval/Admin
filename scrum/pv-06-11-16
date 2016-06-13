@@ -1,0 +1,40 @@
+![UL_Logo](https://github.com/RoboCupULaval/Admin/blob/master/scrum/ul_logo.png)
+
+
+#**Gestion de projet Robocup - 11 Juin 2016**
+
+Équipe IA
+
+Été 2016
+
+
+##**Tâches à faire au cours de la semaine :**
+
+
+- Faire un API pour l'influence map.
+- Compléter l'architecture du behaviour tree (1ere phase).
+- Améliorer les tests unitaires.
+
+##**Tâches à faire pour mercredi :**
+- Interface(façade) pour un infomanager debug.
+- Gestion des paquets de debug.
+- Communication pathfinder vers ui.
+- Afficher l'influence map.
+- Réceptions des tactiques et d'une stratégie.
+
+##**Retour avancement :**
+
+- Avancements au niveau de l'influence map et du behaviour tree; manque l'implémentation.
+- Le 1er refactor de l'info manager est terminé.
+- Retrait du BlackBoard actuel en vue d'une utilisation future plus pertinente.
+- Des classes générales pour Action et Tactic sont implémentées.
+
+##**Membres présents :**
+
+- David C.
+- Maxime G.
+- Étienne B.
+- Alexandre G.
+- Alexandra M.
+- Julien B.
+- Maxime M.
