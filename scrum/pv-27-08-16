@@ -1,0 +1,35 @@
+![UL_Logo](https://github.com/RoboCupULaval/Admin/blob/master/scrum/ul_logo.png)
+
+#Gestion de projet Robocup - 27 août 2016
+
+Équipe IA
+
+Été 2016
+
+##Tâches à faire au cours de la semaine :
+
+- continuer le travail sur le sélecteur stratégique
+- effectuer des tests généraux sur actions et tactiques
+- tests et documentation sur le pathfinder
+- rewind des paquets dans le UI-debug
+- améliorer RotateAroundBall + stratégie d'offense simple pour rencontre Beenox du 9 septembre
+- continuer les tests unitaires de géométrie
+- intégration du behavior tree et restructuration de InfoManager
+
+##Retour avancement :
+
+- introspection du sélecteur stratégique
+- correction de bug dans pathfinder
+- ajout d'event dans ui-debug, amélioration performance, ajout du game state
+- commencé à développer RotateAroundBall + stratégie d'offense simple pour rencontre Beenox du 9 septembre
+- avancement des tests unitaires de géométrie
+- intégration pour architecture + behavior tree
+
+##Membres présents :
+
+- Alexandre GC
+- Alexandra
+- Julien B
+- Charles H
+- Étienne B
+- Maxime G
