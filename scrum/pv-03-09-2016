@@ -1,0 +1,32 @@
+![UL_Logo](https://github.com/RoboCupULaval/Admin/blob/master/scrum/ul_logo.png)
+
+#Gestion de projet Robocup - 3 septembre 2016
+
+Équipe IA
+
+Été 2016
+
+##Tâches à faire au cours de la semaine :
+
+- avancer l'intégration
+- refonte de l'InfoManager
+- continuer le sélecteur stratégique
+- avancer la démo du 9
+
+##Retour avancement :
+
+- réglé overflow dans l'influence map
+- tests d'intégration
+- redesign des packets dans UI-debug
+- ajout d'une liste de timers dans UI-debug
+- modifications aux fonctions géométriques
+- stratégie SimpleOffense pour la démo du 9
+
+##Membres présents :
+
+- Alexandre GC
+- Alexandra
+- Julien B
+- Charles H
+- Étienne B
+- Maxime G
