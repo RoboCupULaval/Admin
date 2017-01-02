@@ -48,4 +48,4 @@ Vous aurez besoin de 3 instances pour tester une stratégie:
 - [grSim](https://github.com/RoboCupULaval/grSim) (pour voir les robots sur le terrain en 3D)
 - [main.py de UI-Debug](https://github.com/RoboCupULaval/UI-Debug) (pour fixer manuellement la stratégie à l'équipe)
 
-**To be continued**
+**To be continued. Future section: utiliser la STA pour construire sa propre stratégie**
