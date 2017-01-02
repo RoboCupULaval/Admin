@@ -34,8 +34,7 @@ n'utilise pas notre nouvel objet Stratégie qui implémente le graphe mentionné
 
 La stratégie accorde à chaque robot une tactique qui variera en fonction des conditions que le robot remplira. 
 Par exemple, la stratégie pourrait attribuer au robot la tactique d'aller chercher la balle (GoGetBall).
-La condition pour passer à la prochaine stratégie pourrait être que le robot soit rendu à la balle, ce qui serait un 
-cas simple qui ne nécessiterait pas l'emploi de notre graphe; en effet, il suffirait de vérifier que la tactique 1 est terminée avant d'accorder au robot la tactique 2.
+La condition pour passer à la prochaine tactique (par exemple, PassBall) pourrait être que le robot soit rendu à la balle, ce qui serait un cas simple qui ne nécessiterait pas l'emploi de notre graphe; en effet, il suffirait de vérifier que la tactique 1 est terminée avant d'accorder au robot la tactique 2.
 
 Toutefois, cette condition pourrait être qu'un autre robot soit placé en position stratégique pour recevoir la balle. Ainsi, il faudra que notre premier robot patiente avant de la lui envoyer.
 Cette nécessité de vérifier des conditions globales, et non centrées sur la tactique d'un seul robot, justifie l'utilisation de notre graphe.
