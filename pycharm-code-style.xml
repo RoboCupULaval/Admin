@@ -17,8 +17,5 @@
     <option name="KEEP_BLANK_LINES_IN_DECLARATIONS" value="2" />
     <option name="KEEP_BLANK_LINES_IN_CODE" value="2" />
     <option name="WRAP_LONG_LINES" value="true" />
-    <indentOptions>
-      <option name="KEEP_INDENTS_ON_EMPTY_LINES" value="true" />
-    </indentOptions>
   </codeStyleSettings>
 </code_scheme>
